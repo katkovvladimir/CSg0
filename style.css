@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+}
+header{
+background-color:#FFD700;
+}
+h1{
+    background-color:#FFD700;
+    color:#FF0000;
+    font-family:Arial Black;
+    font-size:50px;
+}
+footer{
+ background-color:#FFD700;   
+}
+footer p{
+    margin:50px;
+    background-color:#FF0000;
+}
+nav{
+    color:#FF0000;
+    background-color:#FF0000;
+    margin:20px ;
+    padding:10px ;
+    border:5px solid lightgrey ;
+}
+nav a {
+    text-decoration:none;
+    border:20px solid gold ;
+    padding:1px ;
+    background-color:#FF0000;
+    border-radius:100px;
+}
+.whiteboy{
+    background-color:#FF0000;
+    color:navy;
+}
+.oper{
+    background-color:#FF0000 ;
+    border-radius:20px;
+    padding:30px;
+}
+img{
+    border-radius:30px;
+}
+h2{
+    font-size:50px;
+    font-family:Arial Black;
+    color:navy;
+}
