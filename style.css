@@ -1,50 +1,141 @@
-body {
-    font-family: sans-serif;
+
+p {
+    margin: 0;
 }
-header{
-background-color:#FFD700;
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
-h1{
-    background-color:#FFD700;
-    color:#FF0000;
-    font-family:Arial Black;
-    font-size:50px;
+
+.overlay, .scare {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
 }
-footer{
- background-color:#FFD700;   
+
+p.overlay-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    line-height: 1;
+
+    margin-bottom: 16px;
 }
-footer p{
-    margin:50px;
-    background-color:#FF0000;
+
+.overlay-button {
+    display: inline-flex;
+    align-items: center;
+
+    height: 40px;
+
+    padding-right: 24px;
+    padding-left: 24px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+
+    border-radius: 4px;
+
+    margin: 4px;
+
+    cursor: pointer;
 }
-nav{
-    color:#FF0000;
-    background-color:#FF0000;
-    margin:20px ;
-    padding:10px ;
-    border:5px solid lightgrey ;
+
+.overlay-buttons-wrapper {
+    margin: 24px -8px -8px;
 }
-nav a {
-    text-decoration:none;
-    border:20px solid gold ;
-    padding:1px ;
-    background-color:#FF0000;
-    border-radius:100px;
+
+#accept-button {
+    background-color: rgb(132, 94, 194);
+
+    color: white;
 }
-.whiteboy{
-    background-color:#FF0000;
-    color:navy;
+
+#decline-button {
+    color: rgb(132, 94, 194);
+
+    border: 2px solid rgb(132, 94, 194);
 }
-.oper{
-    background-color:#FF0000 ;
-    border-radius:20px;
-    padding:30px;
+
+p.overlay-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.25;
+
+    margin-bottom: 16px;
 }
-img{
-    border-radius:30px;
+
+a.overlay-link {
+    display: inline-block;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(132, 94, 194);
+    line-height: 1;
+
+    position: relative;
+
+    margin-top: 16px;
 }
-h2{
-    font-size:50px;
-    font-family:Arial Black;
-    color:navy;
+
+a.overlay-link::before {
+    position: absolute;
+
+    content: "";
+
+    height: calc(50% + 4px);
+    width: calc(100% + 8px);
+
+    bottom: -4px;
+    left: -4px;
+
+    background-color: rgba(132, 94, 194, 0.1);
+}
+
+.overlay-body {
+    max-width: 512px;
+
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+}
+
+.overlay[hidden] {
+    display: none;
+}
+
+.overlay {
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5f6fa;
+
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.scare {
+    z-index: 1;
+}
+
+video#video {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+video#video::-webkit-media-controls-enclosure {
+    display:none !important;
 }
